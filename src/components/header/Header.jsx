@@ -1,19 +1,18 @@
 import { Link } from "react-router-dom";
-import Logo from "../../assets/logo-color.svg";
 import SearchIcon from "../../assets/magnifying-glass.svg";
 import CartIcon from "../../assets/cart-outline.svg";
 
 const Header = () => {
   return (
-    <header className="container max-h-24">
-      <Link to="/">
-        <img className="w-14" src={Logo} alt="logo" />
+    <header className="grid grid-cols-7 bg-gray-400 ">
+      <Link className="flex items-center justify-start text-xl" to="/">
+        <h1 className="font-mono">Shoppy</h1>
       </Link>
-      <div className="header-search">
+      <div className="header-search flex">
         <input type="text" />
         <img src={SearchIcon} />
       </div>
-      <div className="header-nav">
+      <div className="header-nav flex gap-10">
         <Link to="/login">
           <div className="header-option">
             <div className="header-option_one">Hello guest</div>
@@ -28,7 +27,7 @@ const Header = () => {
         </Link>
         <Link to="/checkout">
           <div className="header-optionBasket">
-            <img src={CartIcon} alt="cart-image" />
+            <img className="w-4" src={CartIcon} alt="cart-image" />
             <div className="header-option_two header-basket_count">
               & Orders
             </div>
