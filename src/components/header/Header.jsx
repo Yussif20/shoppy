@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import SearchIcon from "../../assets/magnifying-glass.svg";
-import CartIcon from "../../assets/cart-outline.svg";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,8 +10,8 @@ const Header = () => {
   };
 
   return (
-    <nav className=" bg-gray-400 ">
-      <div className="container mx-auto px-6">
+    <nav className=" bg-red-500 ">
+      <div className="container mx-auto px-6 ">
         <div className="flex justify-between item-center py-4">
           <div className="text-xl text-white font-bold">
             <Link className="" to="/">
@@ -23,11 +23,11 @@ const Header = () => {
               isMenuOpen ? "block" : "hidden"
             }`}
           >
-            <ul className="lg:flex space-x-4">
+            <ul className="lg:flex space-x-4 ">
               <li>
                 <Link
                   to="/Products"
-                  className="text-red-500 hover:text-red-900 hover:bg-white px-3 py-2 rounded-md"
+                  className="text-white hover:text-red-900 hover:bg-white px-3 py-2 rounded-md"
                 >
                   Products
                 </Link>
@@ -35,7 +35,7 @@ const Header = () => {
               <li>
                 <Link
                   to="/Categories"
-                  className="text-red-500 hover:text-red-900 hover:bg-white px-3 py-2 rounded-md"
+                  className="text-white hover:text-red-900 hover:bg-white px-3 py-2 rounded-md"
                 >
                   Categories
                 </Link>
@@ -43,7 +43,7 @@ const Header = () => {
               <li>
                 <Link
                   to="/cart"
-                  className="text-red-500 hover:text-red-900 hover:bg-white px-3 py-2 rounded-md"
+                  className="text-white hover:text-red-900 hover:bg-white px-3 py-2 rounded-md"
                 >
                   Cart
                 </Link>
@@ -51,13 +51,22 @@ const Header = () => {
               <li>
                 <Link
                   to="/Account"
-                  className="text-red-500 hover:text-red-900 hover:bg-white px-3 py-2 rounded-md"
+                  className="text-white hover:text-red-900 hover:bg-white px-3 py-2 rounded-md"
                 >
                   Account
                 </Link>
               </li>
             </ul>
           </div>
+          <button
+            className="lg:hidden text-gray-300 hover:text-white focus:outline-none"
+            onClick={toggleMenu}
+          >
+            <FontAwesomeIcon
+              className="h-6 w-6 bg-white text-white fa-solid"
+              icon={faBars}
+            />{" "}
+          </button>
         </div>
       </div>
     </nav>

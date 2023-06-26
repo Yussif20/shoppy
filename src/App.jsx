@@ -1,6 +1,6 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import MainNav from "./components/MainNav";
+
 import Header from "./components/header/Header";
 
 function App() {
@@ -12,7 +12,6 @@ function App() {
             path="/"
             element={
               <>
-                <MainNav />
                 <Header />
               </>
             }
