@@ -23,37 +23,40 @@ const Header = () => {
               isMenuOpen ? "block" : "hidden"
             }`}
           >
-            <ul className="lg-flex space-x-4">
+            <ul className="lg:flex space-x-4">
               <li>
-                <Link></Link>
+                <Link
+                  to="/Products"
+                  className="text-red-500 hover:text-red-900 hover:bg-white px-3 py-2 rounded-md"
+                >
+                  Products
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/Categories"
+                  className="text-red-500 hover:text-red-900 hover:bg-white px-3 py-2 rounded-md"
+                >
+                  Categories
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/cart"
+                  className="text-red-500 hover:text-red-900 hover:bg-white px-3 py-2 rounded-md"
+                >
+                  Cart
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/Account"
+                  className="text-red-500 hover:text-red-900 hover:bg-white px-3 py-2 rounded-md"
+                >
+                  Account
+                </Link>
               </li>
             </ul>
-          </div>
-          <div className="header-search flex">
-            <input type="text" />
-            <img src={SearchIcon} />
-          </div>
-          <div className="header-nav flex gap-10">
-            <Link to="/login">
-              <div className="header-option">
-                <div className="header-option_one">Hello guest</div>
-                <div className="header-option_two">Sign in</div>
-              </div>
-            </Link>
-            <Link to="/orders">
-              <div className="header-option">
-                <div className="header-option_one">Returns</div>
-                <div className="header-option_two">& Orders</div>
-              </div>
-            </Link>
-            <Link to="/checkout">
-              <div className="header-optionBasket">
-                <img className="w-4" src={CartIcon} alt="cart-image" />
-                <div className="header-option_two header-basket_count">
-                  & Orders
-                </div>
-              </div>
-            </Link>
           </div>
         </div>
       </div>
